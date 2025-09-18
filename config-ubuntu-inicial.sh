@@ -1,6 +1,6 @@
 #!/bin/bash -xv
 # Redefine o mapa do teclado para ABNT
-sed -i "s/us/br/g" /etc/defaul/keyboard
+localectl set-keymap br-abnt
 # Instalar o git
 apt install git -y
 # Criar diretorio shell e entrar nele
