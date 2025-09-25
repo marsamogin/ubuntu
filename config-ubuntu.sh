@@ -4,7 +4,7 @@ sudo systemctl disable ufw && sudo systemctl stop ufw
 echo "Atualizar os repositórios e pacotes:"
 sudo apt update -y && sudo apt upgrade -y
 echo "Instalar os pacotes que mais usamos:"
-sudo apt install build-essential rsync bind9-utils cmake automake net-tools bacula-fd postfix s-nail zip chrony lynx lsof -y
+sudo apt install mailutils build-essential rsync bind9-utils cmake automake net-tools bacula-fd postfix s-nail zip chrony lynx lsof -y
 echo "Ir até a pasta "/tmp" e baixar os scripts usados por nos do Github:"
 cd /tmp
 git clone https://github.com/marsamogin/linux
