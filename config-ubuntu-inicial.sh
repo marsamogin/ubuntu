@@ -4,11 +4,13 @@ localectl set-keymap br-abnt
 # Instalar o git
 apt install git -y
 # Criar diretorio shell e entrar nele
-mkdir /root/shell && cd /root/shell
+mkdir /root/shell
+cd /root/shell
 # Baixar shell do Github
 git clone https://github.com/marsamogin/ubuntu
 # Mover arquivos para diretorio shell
 mv /root/shell/ubuntu/*.sh .
+mv /root/shell/ubuntu/main.cf-ubuntu .
 # Adicionar permissao de execuçao aos aqruivos
 chmod +x *.sh
 # Remove diretorio baixado
