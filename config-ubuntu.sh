@@ -5,13 +5,13 @@ echo "Atualizar os repositórios e pacotes:"
 sudo apt update -y && sudo apt upgrade -y
 echo "Instalar os pacotes que mais usamos:"
 sudo apt install mailutils build-essential rsync bind9-utils cmake automake net-tools bacula-client postfix s-nail zip chrony lynx lsof -y
-echo "Ir até a pasta "/tmp" e baixar os scripts usados por nos do Github:"
-cd /tmp
+echo "Ir ate a psta "/root" e baixar os scripts usados por nos do Github:"
+cd /root
 git clone https://github.com/marsamogin/linux
 echo "Copiar arquivos prontos de config. para destino"
-mv -f /tmp/linux/chrony.conf /etc
-mv -f /tmp/linux/bacula-fd.conf /etc/bacula
-mv -f /tmp/linux/*.sh /root/shell
+mv -f ./linux/chrony.conf /etc
+mv -f ./linux/bacula-fd.conf /etc/bacula
+mv -f ./linux/*.sh /root/shell
 mv -f /root/shell/main.cf-ubuntu /etc/postfix/main.cf
 chmod +x /root/shell/*.sh
 echo "Definir nome do host no arquivo do Bacula"
