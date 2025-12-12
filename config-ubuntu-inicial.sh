@@ -1,8 +1,6 @@
 #!/bin/bash -xv
 # Redefine o mapa do teclado para ABNT
 localectl set-keymap br-abnt
-# Baixar shell do Github
-git clone https://github.com/marsamogin/ubuntu
 # Mover arquivos para diretorio shell
 mv /root/shell/ubuntu/*.sh .
 mv /root/shell/ubuntu/main.cf-ubuntu .
