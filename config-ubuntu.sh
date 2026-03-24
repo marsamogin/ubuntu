@@ -5,12 +5,11 @@ echo "Atualizar os repositórios e pacotes:"
 sudo apt update -y && sudo apt upgrade -y
 echo "Instalar os pacotes que mais usamos:"
 sudo apt install mailutils build-essential rsync bind9-utils cmake automake net-tools postfix s-nail zip chrony lynx lsof -y
-echo "Ir ate a psta "/root" e baixar os scripts usados por nos do Github:"
-cd /root
+echo "Baixar os scripts usados por nos do Github:"
 git clone https://github.com/marsamogin/linux
 echo "Copiar arquivos prontos de config. para destino"
 mv -f ./linux/chrony.conf /etc
-mv -f ./linux/*.sh /root/shell
+mv -f ./linux/*.sh .
 mv -f /root/shell/main.cf-ubuntu /etc/postfix/main.cf
 chmod +x /root/shell/*.sh
 echo "Definir o nome do host no arquivo do Postfix"
