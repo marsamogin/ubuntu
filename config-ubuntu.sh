@@ -10,11 +10,10 @@ git clone https://github.com/marsamogin/linux
 echo "Copiar arquivos prontos de config. para destino"
 mv -f ./linux/chrony.conf /etc
 mv -f ./linux/*.sh .
-mv -f /root/shell/main.cf-ubuntu /etc/postfix/main.cf
-chmod +x /root/shell/*.sh
+mv -f /root/shell/ubuntu/main.cf-ubuntu /etc/postfix/main.cf
 echo "Definir o nome do host no arquivo do Postfix"
 sed -i "s/trocar/$(hostname)/g" /etc/postfix/main.cf
-echo "Habilitar os servicos postfix e bacula da maquina"
+echo "Habilitar os servicos postfix da maquina"
 systemctl enable postfix
 echo "Ajustar a configuracao do sshd_config"
 sed -i "s/#PubkeyAuthentication yes/PubkeyAuthentication yes/g" /etc/ssh/sshd_config
