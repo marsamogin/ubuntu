@@ -16,6 +16,9 @@ echo "Configurar acesso usuario keite"
 echo "Configurar acesso usuario danfeijo"
 ./create-user-ubuntu-danfeijo.sh
 ##########################################
+echo "Configurar acesso usuario dti"
+./create-user-ubuntu-dti.sh
+##########################################
 # Capturar o nome da maquina
 hostname=$(hostname)
 echo "Copiar as chaves privadas para a maquina Linux auxiliar"
