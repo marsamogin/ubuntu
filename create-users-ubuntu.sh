@@ -22,6 +22,6 @@ echo "Configurar acesso usuario dti"
 # Capturar o nome da maquina
 hostname=$(hostname)
 echo "Copiar as chaves privadas para a maquina Linux auxiliar"
-scp *@$hostname marcio@143.106.108.5:/tmp
+scp *@$hostname marcio@143.106.190.136:/tmp
 rm -rf *@$hostname
 ./config-ubuntu.sh
